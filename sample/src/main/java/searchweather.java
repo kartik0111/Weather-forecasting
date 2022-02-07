@@ -42,7 +42,7 @@ public class searchweather {
 */
         client
                 .preparedQuery("SELECT * FROM Saveweather WHERE city=?")
-                .execute(Tuple.of("Ojas"), ar -> {
+                .execute(Tuple.of("Lucknow"), ar -> {
                     if (ar.succeeded()) {
                         RowSet<Row> rows = ar.result();
                         for (Row row : rows) {
